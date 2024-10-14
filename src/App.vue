@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <Checklist />
+    <ChecklistApp />
   </div>
 </template>
 
 <script>
-import Checklist from './components/Checklist.vue';
+import ChecklistApp from './components/ChecklistApp.vue'; // Ensure correct import
 
 export default {
+  name: 'App',
   components: {
-    Checklist,
+    ChecklistApp, // Use the correct name here
   },
 };
 </script>

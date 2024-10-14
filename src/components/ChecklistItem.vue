@@ -1,20 +1,25 @@
 <template>
-  <li>
-    <input type="checkbox" v-model="item.completed" />
-    <span :class="{ completed: item.completed }">{{ item.text }}</span>
-    <button @click="$emit('remove')">Remove</button>
+  <li :class="{ 'list-group-item': true, completed: todo.completed }">
+    <input type="checkbox" :checked="todo.completed" @change="toggleComplete" />
+    {{ todo.text }}
+    <button class="btn btn-danger btn-sm float-end" @click="$emit('remove')">Remover</button>
   </li>
 </template>
 
 <script>
 export default {
   props: {
-    item: Object,
+    todo: Object
   },
+  methods: {
+    toggleComplete() {
+      this.$emit('update:completed', !this.todo.completed);
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
 .completed {
   text-decoration: line-through;
 }
