@@ -1,4 +1,14 @@
+
 <template>
+
+<div>
+    <h1>Login</h1>
+    <input v-model="email" placeholder="Email" />
+    <input v-model="password" type="password" placeholder="Password" />
+    <button @click="login">Login</button>
+  </div>
+
+
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
@@ -31,6 +41,27 @@
 </template>
 
 <script>
+import { signIn } from '../services/auth';
+
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    async login() {
+      try {
+        await signIn(this.email, this.password);
+        // Handle successful login
+      } catch (error) {
+        console.error(error);
+        // Handle errors
+      }
+    },
+  },
+};
 export default {
   name: 'HelloWorld',
   props: {

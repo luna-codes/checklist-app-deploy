@@ -15,19 +15,19 @@ import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyA3QJRAOMPxhn1-8jGsFbDkxpQDlE_fOnk",
+  apiKey: "AIzaSyAYGoClz_aX1s1arGS4_zXDo4C3gkp82nM",
 
-  authDomain: "lista-tarefas-vue-denson.firebaseapp.com",
+  authDomain: "checklist-app-denson.firebaseapp.com",
 
-  projectId: "lista-tarefas-vue-denson",
+  projectId: "checklist-app-denson",
 
-  storageBucket: "lista-tarefas-vue-denson.appspot.com",
+  storageBucket: "checklist-app-denson.appspot.com",
 
-  messagingSenderId: "719991744419",
+  messagingSenderId: "1023567013145",
 
-  appId: "1:719991744419:web:f2080e96e93199c294dc16",
+  appId: "1:1023567013145:web:f07fd203784b0fbb399188",
 
-  measurementId: "G-VC4BM054FZ"
+  measurementId: "G-Y3WFY4ZDF9"
 
 };
 
@@ -37,8 +37,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const analytics = getAnalytics(app);
-
-import { createApp } from 'vue'
-import App from './App.vue'
-
-createApp(App).mount('#app')
